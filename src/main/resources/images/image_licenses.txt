@@ -1,0 +1,17 @@
+The following images were not created by PhanMemBanSung contributors and have their own licenses:
+
+back_button.png Creative Commons Attribution by Appzgear (http://www.flaticon.com/packs/clear-icons)
+blank_page.png -- GNU/GPL
+gnome_*.png -- GNU/GPL
+tags.png -- Freeware by Midtone Design Studios
+bring_forward.png -- LGPL
+send_backward.png -- LGPL
+mute.png and sound.png  Creative Commons Attribution by brsev (http://findicons.com/icon/80540/mute?id=80683 and http://findicons.com/icon/80522/sound)
+normal_folder.png Creative Commons Attribution by Delacro (http://findicons.com/icon/261168/normal_folder)
+pictures.png Creative Commons Attribution by Asher (http://findicons.com/icon/64878/pictures)
+
+All of these were found via https://www.iconfinder.com or http://www.findicons.com.
+
+The Appleseed(TM) AQT silhouette is used by permission from the RWVA. All rights reserved. ***
+
+*** These images are labeled as the Appleseed D Silhouette. WE DO NOT HAVE PERMISSION TO USE ANY OTHER RWVA/PROJECT APPLESEED CONTENT!!!!

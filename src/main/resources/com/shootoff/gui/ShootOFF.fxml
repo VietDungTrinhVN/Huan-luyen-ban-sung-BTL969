@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Copyright (C) 2016 phrack. All rights reserved.
+ Use of this source code is governed by a BSD-style license that can be
+ found in the LICENSE file.
+-->
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="shootOffContainer" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shootoff.gui.controller.ShootOFFController">
+   <children>
+      <HBox fx:id="controlsContainer" alignment="TOP_CENTER" minHeight="160.0" prefWidth="200.0" spacing="175.0">
+         <children>
+            <!-- <Button mnemonicParsing="false" onMouseClicked="#fileButtonClicked" prefHeight="100.0" prefWidth="150.0" text="TÙY CHỌN" style="-fx-font-size: 12pt; -fx-font-weight: bold"/> -->
+            <Button mnemonicParsing="false" onMouseClicked="#fileButtonClicked" prefHeight="100.0" prefWidth="150.0" text="TÙY CHỌN"/>
+            <!--<Button mnemonicParsing="false" onMouseClicked="#targetsButtonClicked" prefHeight="100.0" prefWidth="150.0" text="Mục Tiêu" /> -->
+            <!--<Button mnemonicParsing="false" onMouseClicked="#trainingButtonClicked" prefHeight="100.0" prefWidth="150.0" text="Huấn Luyện" /> -->
+<!--             <Button mnemonicParsing="false" onMouseClicked="#projectorButtonClicked" prefHeight="100.0" prefWidth="150.0" text="Projector" /> -->
+            <Button mnemonicParsing="false" onMouseClicked="#saveImage" prefHeight="100.0" prefWidth="150.0" text="LƯU HÌNH ẢNH" />
+            <!--<Button mnemonicParsing="false" onAction="#resetClicked" prefHeight="100.0" prefWidth="150.0" text="LÀM MỚI MÀN HÌNH" />-->
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </HBox>
+      <VBox fx:id="bodyContainer">
+         <children>
+            <HBox spacing="30.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportWidth="245.0" minWidth="245.0" HBox.hgrow="ALWAYS">
+                     <content>
+                        <TableView fx:id="shotTimerTable" minHeight="0.0" minWidth="0.0" />
+                     </content>
+                  </ScrollPane>
+                  <TabPane fx:id="cameraTabPane" minHeight="480.0" minWidth="640.0" prefHeight="480.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS"/>
+                  <VBox fx:id="buttonsContainer" alignment="CENTER" spacing="30.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#resetClicked" prefHeight="100.0" prefWidth="150.0" text="LÀM MỚI MÀN HÌNH" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" />
+               </padding>
+            </HBox>
+            <!-- <ScrollPane fx:id="trainingExerciseScrollPane" hbarPolicy="NEVER" minHeight="150.0" HBox.hgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="trainingExerciseContainer" />
+               </content>
+            </ScrollPane> -->
+         </children>
+      </VBox>
+   </children>
+</VBox>

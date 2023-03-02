@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<VBox fx:id="targetEditorPane" alignment="TOP_CENTER" fillWidth="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shootoff.gui.controller.TargetEditorController">
+   <children>
+      <ToolBar>
+        <items>
+          <Button mnemonicParsing="false" onAction="#saveTarget" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(&quot;images/gnome_media_floppy.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;">
+               <tooltip>
+                  <Tooltip text="Lưu Mục Tiêu" />
+               </tooltip>
+          </Button>
+          <Button mnemonicParsing="false" onAction="#setBackgroundImage" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(&quot;images/pictures.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;">
+             <tooltip>
+                <Tooltip text="Cài Đặt Ảnh Nền" />
+             </tooltip>
+          </Button>
+          <ToggleButton fx:id="cursorButton"  mnemonicParsing="false" onAction="#cursorSelected" prefHeight="40.0" prefWidth="40.0" selected="true" style="-fx-background-image: url(&quot;images/cursor.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;">
+               <toggleGroup>
+                  <ToggleGroup fx:id="targetDrawingControls" />
+               </toggleGroup>
+               <tooltip>
+                  <Tooltip text="Chọn Vùng" />
+               </tooltip>
+          </ToggleButton>
+          <ToggleButton fx:id="imageButton"  mnemonicParsing="false" onAction="#openImage" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(&quot;images/gnome_image_x_generic.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;" toggleGroup="$targetDrawingControls">
+               <tooltip>
+                  <Tooltip text="Vẽ Hình Ảnh" />
+               </tooltip>
+          </ToggleButton>
+          <ToggleButton fx:id="rectangleButton"  mnemonicParsing="false" onAction="#drawShape" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(&quot;images/rectangle.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;" toggleGroup="$targetDrawingControls">
+			   <tooltip>
+                  <Tooltip text="Vẽ Hình Chữ Nhật" />
+               </tooltip>    
+          </ToggleButton>      
+          <ToggleButton fx:id="ovalButton"  mnemonicParsing="false" onAction="#drawShape" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(&quot;images/oval.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;" toggleGroup="$targetDrawingControls">
+			   <tooltip>
+                  <Tooltip text="Vẽ Hình Oval" />
+               </tooltip>    
+          </ToggleButton>     
+          <ToggleButton fx:id="triangleButton"  mnemonicParsing="false" onAction="#drawShape" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(&quot;images/triangle.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;" toggleGroup="$targetDrawingControls">
+			   <tooltip>
+                  <Tooltip text="Vẽ Hình Tam Giác" />
+               </tooltip>    
+          </ToggleButton>     
+          <ToggleButton fx:id="appleseedThreeButton"  mnemonicParsing="false" onAction="#drawShape" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(&quot;images/appleseed_d_silhouette_3.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;" toggleGroup="$targetDrawingControls">
+			   <tooltip>
+                  <Tooltip text="Vẽ D Hình Bóng 3" />
+               </tooltip>    
+          </ToggleButton>     
+          <ToggleButton fx:id="appleseedFourButton"  mnemonicParsing="false" onAction="#drawShape" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(&quot;images/appleseed_d_silhouette_4.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;" toggleGroup="$targetDrawingControls">
+			   <tooltip>
+                  <Tooltip text="Vẽ D Hình Bóng 4" />
+               </tooltip>    
+          </ToggleButton>   
+          <ToggleButton fx:id="appleseedFiveButton"  mnemonicParsing="false" onAction="#drawShape" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(&quot;images/appleseed_d_silhouette_5.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;" toggleGroup="$targetDrawingControls">
+			   <tooltip>
+                  <Tooltip text="Vẽ D Hình Bóng 5" />
+               </tooltip>    
+          </ToggleButton>   
+          <ToggleButton fx:id="freeformButton"  mnemonicParsing="false" onAction="#startPolygon" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(&quot;images/freeform_polygon.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;" toggleGroup="$targetDrawingControls">
+			   <tooltip>
+                  <Tooltip text="Vẽ Đa Giác Tự Do" />
+               </tooltip>    
+          </ToggleButton>   
+          <Button fx:id="bringForwardButton" disable="true"  mnemonicParsing="false" onAction="#bringForward" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(&quot;images/bring_forward.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;">
+			   <tooltip>
+                  <Tooltip text="Về Trước" />
+               </tooltip>    
+          </Button>   
+          <Button fx:id="sendBackwardButton" disable="true"  mnemonicParsing="false" onAction="#sendBackward" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(&quot;images/send_backward.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;">
+			   <tooltip>
+                  <Tooltip text="Gửi Về Sau" />
+               </tooltip>    
+          </Button>   
+          <ToggleButton fx:id="tagsButton"  mnemonicParsing="false" onAction="#toggleTagEditor" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(&quot;images/tags.png&quot;); -fx-background-position: center; -fx-background-repeat: no-repeat;">
+			   <tooltip>
+                  <Tooltip text="Chỉnh sửa thẻ của khu vực đã chọn" />
+               </tooltip>    
+          </ToggleButton>   
+          <ChoiceBox fx:id="regionColorChoiceBox" disable="true" prefWidth="140.0">
+			   <tooltip>
+                  <Tooltip text="Đặt màu tô của vùng đã chọn" />
+               </tooltip>    
+          </ChoiceBox>   
+        </items>
+      </ToolBar>
+      <Pane fx:id="canvasPane" onMouseClicked="#regionDropped" onMouseMoved="#mouseMoved" prefHeight="480.0" prefWidth="640.0" />
+   </children>
+</VBox>

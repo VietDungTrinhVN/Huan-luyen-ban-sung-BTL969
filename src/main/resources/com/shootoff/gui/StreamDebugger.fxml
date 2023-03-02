@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shootoff.gui.controller.StreamDebuggerController">
+   <children>
+      <ImageView fx:id="thresholdImageView" fitHeight="480.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true" />
+      <Label text="Kích Thước Đường Viền Gần Đúng Của Trung Tâm Bắn:" />
+      <Slider fx:id="centerBorderSlider" majorTickUnit="2.0" max="10.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="3.0" />
+      <Label text="Kích Thước Vệt Bắn Tối Thiểu Được Phát Hiện:" />
+      <Slider fx:id="minDimSlider" blockIncrement="1.0" majorTickUnit="2.0" max="20.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="7.0" />
+   </children>
+</VBox>
